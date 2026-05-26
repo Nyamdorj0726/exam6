@@ -1,80 +1,565 @@
 <!DOCTYPE html>
 <html lang="mn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hole in One - Гольфын Амралтын Газар</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>EduHub — Онлайн сургалтын платформ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800;9..144,900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Hole in One</h1>
-    <nav>
-      <img src="https://dunnerholme.co.uk/golf/wp-content/uploads/2022/08/holeinone-landscape-1024x614.jpg" alt="" id="screenimg">
-      <ul>
-        <li><a href="#home">Нүүр</a></li>
-        <li><a href="#facilities">Байгууламж</a></li>
-        <li><a href="#packages">Багцууд</a></li>
-        <li><a href="#contact">Холбоо барих</a></li>
-      </ul>
+
+<!-- ============== HEADER ============== -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#" class="logo" data-page="home" aria-label="EduHub нүүр хуудас">
+      <div class="logo-mark">
+        <i class="fa-solid fa-graduation-cap"></i>
+      </div>
+      <span class="logo-text">Edu<strong>Hub</strong></span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#" class="nav-link active" data-page="home">Нүүр</a>
+      <a href="#" class="nav-link" data-page="lessons">Онлайн хичээлүүд</a>
+      <a href="#" class="nav-link" data-page="exercises">Дасгал даалгавар</a>
+      <a href="#" class="nav-link" data-page="assessment">Үнэлгээ</a>
+      <a href="#" class="nav-link" data-page="mycourses">Миний сургалт</a>
     </nav>
-  </header>
-  <section id="facilities">\
-    <h2>Бидний Байгууламжууд</h2>
-    <ul>
-      <li> Аварга шалгаруулах 3 гольфын талбай (Sea View багтсан)</li>
-      <li> 2 клубын байр</li>
-      <li> Зочид буудал</li>
-      <li> Ресторан, кафе</li>
-      <li> Мэргэжлийн дэлгүүр</li>
-      <li> Гэрэлтүүлэгтэй жолооны талбай</li>
-      <li> Гольфын хичээл, дижитал дасгалжуулалт</li>
-      <li> Кади үйлчилгээ</li>
-    </ul>
-  </section>
-  <section id="packages">
-    <h2>Санал болгож буй Багцууд</h2>
-    <article>
-      <h3> Таван тойрог</h3>
-      <ul>
-        <li>5 шөнө тансаг өрөөнд байрлана</li>
-        <li>5 удаагийн 18 нүхтэй тойрог</li>
-        <li>Sea View талбайн сургалтанд нэг удаа орно</li>
-        <li>Үнэгүй дижитал дасгалжуулалт</li>
-      </ul>
-    </article>
-    <article>
-      <h3> Гурвалсан үйлчилгээ</h3>
-      <ul>
-        <li>2 хоног, 2 өөр өрөөнд байрлана</li>
-        <li>3 удаагийн 18 цооногтой тоглолт</li>
-        <li>Түрээсийн тэрэг үнэгүй</li>
-        <li>20% хямдралтай дэлгүүр</li>
-      </ul>
-    </article>
-    <article>
-      <h3> Амрах завсарлага</h3>
-      <ul>
-        <li>Бүтэн өглөөний цай</li>
-        <li>Ресторанд оройн хоол үнэгүй</li>
-        <li>Сургалтанд хамрагдах боломжтой (Sea View орохгүй)</li>
-        <li>Клуб үнэгүй</li>
-      </ul>
-    </article>
-    <p> Тусгай болон байгууллагын багцуудын талаар бидэнтэй холбогдоно уу.</p>
+
+    <div class="header-right">
+      <button class="sign-in-btn" id="signInBtn">
+        <i class="fa-regular fa-user"></i>
+        <span id="signInLabel">Нэвтрэх</span>
+      </button>
+      <button class="burger" id="burgerBtn" aria-label="Цэс">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============== ХАЖУУГИЙН ВИДЕО/ЗАР ============== -->
+<aside class="side-panel left-panel">
+  <div class="promo-card">
+    <div class="promo-tag">
+      <i class="fa-solid fa-bolt"></i> Шинэ
+    </div>
+    <h3>VIDEO &amp; ADDS</h3>
+    <p>Долоо хоног бүр шинэ видео хичээл нэмэгдэнэ</p>
+    <div class="promo-visual">
+      <i class="fa-solid fa-play"></i>
+    </div>
+    <button class="promo-btn">Үзэх</button>
+  </div>
+
+  <div class="promo-card promo-secondary">
+    <div class="promo-tag tag-orange">
+      <i class="fa-solid fa-gift"></i> Хямдрал
+    </div>
+    <h4>Бүх хичээлд -30%</h4>
+    <p>Зөвхөн энэ 7 хоногт</p>
+  </div>
+</aside>
+
+<!-- ============== БАРУУН ТАЛЫН SOCIAL ============== -->
+<aside class="social-rail">
+  <a href="https://facebook.com" target="_blank" class="social-icon fb" aria-label="Facebook">
+    <i class="fa-brands fa-facebook-f"></i>
+  </a>
+  <a href="https://instagram.com" target="_blank" class="social-icon ig" aria-label="Instagram">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+  <a href="https://youtube.com" target="_blank" class="social-icon yt" aria-label="YouTube">
+    <i class="fa-brands fa-youtube"></i>
+  </a>
+  <a href="https://threads.net" target="_blank" class="social-icon th" aria-label="Threads">
+    <i class="fa-brands fa-threads"></i>
+  </a>
+</aside>
+
+<!-- ============== ҮНДСЭН АГУУЛГА ============== -->
+<main class="content">
+
+  <!-- ===== НҮҮР ХУУДАС ===== -->
+  <section class="page page-home active" data-page="home">
+    <div class="hero">
+      <div class="hero-bg-shapes">
+        <span class="shape shape-1"></span>
+        <span class="shape shape-2"></span>
+        <span class="shape shape-3"></span>
+      </div>
+      <div class="hero-text">
+        <span class="hero-eyebrow">★ Боловсролын шинэ үе ★</span>
+        <h1>WELCOME</h1>
+        <p class="hero-sub">Математик ба Мэдээллийн технологийн чанартай онлайн хичээлүүд таны гарт. 8, 9, 10-р ангийн сурагчдад зориулсан.</p>
+        <div class="hero-actions">
+          <button class="btn-primary" onclick="navigateTo('lessons')">
+            Хичээл үзэх <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <button class="btn-ghost" onclick="navigateTo('exercises')">
+            Дасгал хийх
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Платформын танилцуулга -->
+    <div class="section-block">
+      <div class="section-head">
+        <h2>Платформын тухай</h2>
+        <p>Доорх 4 үндсэн хэсэгтэй ажиллана</p>
+      </div>
+      <div class="feature-grid">
+
+        <div class="feature-card" onclick="navigateTo('lessons')">
+          <div class="feature-icon icon-blue"><i class="fa-solid fa-video"></i></div>
+          <h3>Онлайн хичээлүүд</h3>
+          <p>Анги, сэдвээр бүлэглэсэн видео болон слайд/PDF хичээлүүдийг үзэх боломжтой.</p>
+          <span class="feature-link">Үргэлжлүүлэх <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+
+        <div class="feature-card" onclick="navigateTo('exercises')">
+          <div class="feature-icon icon-pink"><i class="fa-solid fa-pen-to-square"></i></div>
+          <h3>Дасгал даалгавар</h3>
+          <p>Сэдэв тус бүрийн дасгал, бодолт, тайлбар болон холбогдох хичээлийн линктэй.</p>
+          <span class="feature-link">Үргэлжлүүлэх <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+
+        <div class="feature-card" onclick="navigateTo('assessment')">
+          <div class="feature-icon icon-orange"><i class="fa-solid fa-clipboard-check"></i></div>
+          <h3>Үнэлгээ</h3>
+          <p>Өөрийгөө сорих тест, шалгалт, мөн амжилттай тэнцсэн тохиолдолд сертификат олгоно.</p>
+          <span class="feature-link">Үргэлжлүүлэх <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+
+        <div class="feature-card" onclick="navigateTo('mycourses')">
+          <div class="feature-icon icon-green"><i class="fa-solid fa-user-graduate"></i></div>
+          <h3>Миний сургалт</h3>
+          <p>Үзсэн хичээл, ажилласан даалгавар болон цуглуулсан сертификатуудаа нэг дороос харна.</p>
+          <span class="feature-link">Үргэлжлүүлэх <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Статистик -->
+    <div class="stats-bar">
+      <div class="stat"><strong>120+</strong><span>Видео хичээл</span></div>
+      <div class="stat"><strong>500+</strong><span>Дасгал даалгавар</span></div>
+      <div class="stat"><strong>2,000+</strong><span>Идэвхтэй сурагч</span></div>
+      <div class="stat"><strong>15+</strong><span>Туршлагатай багш</span></div>
+    </div>
+
+    <!-- Шилдэг хичээл -->
+    <div class="section-block">
+      <div class="section-head">
+        <h2>Шилдэг хичээлүүд</h2>
+        <p>Сурагчдын хамгийн их үздэг сэдвүүд</p>
+      </div>
+      <div class="course-grid">
+        <article class="course-card-lg">
+          <div class="cc-thumb thumb-math">
+            <i class="fa-solid fa-square-root-variable"></i>
+          </div>
+          <div class="cc-body">
+            <span class="cc-tag">Математик · 10-р анги</span>
+            <h4>Адил талт гурвалжин</h4>
+            <p>Геометрийн үндсэн ойлголтоос гүн гүнзгий бодолт хүртэл.</p>
+            <div class="cc-meta">
+              <span><i class="fa-regular fa-clock"></i> 45 мин</span>
+              <span><i class="fa-regular fa-star"></i> 4.9</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="course-card-lg">
+          <div class="cc-thumb thumb-it">
+            <i class="fa-solid fa-code"></i>
+          </div>
+          <div class="cc-body">
+            <span class="cc-tag">Мэдээлэл зүй · 9-р анги</span>
+            <h4>Python програмчлал</h4>
+            <p>Анхан шатнаас бодит жишээ хүртэл алхам алхмаар суралцах.</p>
+            <div class="cc-meta">
+              <span><i class="fa-regular fa-clock"></i> 60 мин</span>
+              <span><i class="fa-regular fa-star"></i> 4.8</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="course-card-lg">
+          <div class="cc-thumb thumb-math2">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <div class="cc-body">
+            <span class="cc-tag">Математик · 8-р анги</span>
+            <h4>Функцийн график</h4>
+            <p>График зурах, унших, тайлбарлах ур чадварыг хөгжүүлэх.</p>
+            <div class="cc-meta">
+              <span><i class="fa-regular fa-clock"></i> 40 мин</span>
+              <span><i class="fa-regular fa-star"></i> 4.7</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
   </section>
 
-  <section id="contact">
-  <h2>Холбоо барих</h2>
-  <p>Манай багтай дараах хаягаар шууд холбоо барина уу:</p>
-  <ul>
-    <li> Утас: +351 912 345 678</li>
-    <li> Имэйл: info@holeinone.pt</li>
-  </ul>
-</section>
+  <!-- ===== ОНЛАЙН ХИЧЭЭЛҮҮД ===== -->
+  <section class="page page-lessons" data-page="lessons">
+    <div class="page-header">
+      <h1>Онлайн хичээлүүд</h1>
+      <p>Анги болон хичээлээр бүлэглэгдсэн бүх хичээл</p>
+    </div>
 
-  <footer>
-    <p>&copy; 2025 Hole in One</p>
-  </footer>
+    <!-- Математик -->
+    <div class="subject-block">
+      <h2 class="subject-title"><i class="fa-solid fa-square-root-variable"></i> МАТЕМАТИК</h2>
+      <div class="lesson-grid">
+        <div class="lesson-card" onclick="openLesson('Адил талт гурвалжин', '8-р анги', 'math')">
+          <span class="grade-badge">8-р анги</span>
+          <h4>Адил талт гурвалжин</h4>
+          <p>Геометрийн үндсэн дүрсүүдийн шинж чанар</p>
+          <span class="lesson-link">Дэлгэрэнгүй <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+        <div class="lesson-card" onclick="openLesson('Тоон функц', '9-р анги', 'math')">
+          <span class="grade-badge">9-р анги</span>
+          <h4>Тоон функц</h4>
+          <p>Функцийн ерөнхий ойлголт, төрлүүд</p>
+          <span class="lesson-link">Дэлгэрэнгүй <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+        <div class="lesson-card" onclick="openLesson('Дифференциал', '10-р анги', 'math')">
+          <span class="grade-badge">10-р анги</span>
+          <h4>Дифференциал тооцоо</h4>
+          <p>Уламжлал, дифференциалын дүрэм</p>
+          <span class="lesson-link">Дэлгэрэнгүй <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Мэдээллийн технологи -->
+    <div class="subject-block">
+      <h2 class="subject-title"><i class="fa-solid fa-laptop-code"></i> МЭДЭЭЛЛИЙН ТЕХНОЛОГИ</h2>
+      <div class="lesson-grid">
+        <div class="lesson-card" onclick="openLesson('HTML үндэс', '8-р анги', 'it')">
+          <span class="grade-badge">8-р анги</span>
+          <h4>HTML үндэс</h4>
+          <p>Вэб хуудас үүсгэх үндсэн ойлголт</p>
+          <span class="lesson-link">Дэлгэрэнгүй <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+        <div class="lesson-card" onclick="openLesson('Python програмчлал', '9-р анги', 'it')">
+          <span class="grade-badge">9-р анги</span>
+          <h4>Python програмчлал</h4>
+          <p>Хувьсагч, нөхцөл, давталт</p>
+          <span class="lesson-link">Дэлгэрэнгүй <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+        <div class="lesson-card" onclick="openLesson('Алгоритм', '10-р анги', 'it')">
+          <span class="grade-badge">10-р анги</span>
+          <h4>Алгоритм ба өгөгдлийн бүтэц</h4>
+          <p>Эрэмбэлэх, хайх алгоритмууд</p>
+          <span class="lesson-link">Дэлгэрэнгүй <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ДАСГАЛ ДААЛГАВАР ===== -->
+  <section class="page page-exercises" data-page="exercises">
+    <div class="page-header">
+      <h1>Дасгал даалгавар</h1>
+      <p>Бие даан хийх дасгалууд бодолт болон тайлбартай</p>
+    </div>
+
+    <div class="subject-block">
+      <h2 class="subject-title"><i class="fa-solid fa-square-root-variable"></i> МАТЕМАТИК</h2>
+      <div class="exercise-list">
+        <div class="exercise-row">
+          <div class="ex-info">
+            <span class="grade-badge">8-р анги</span>
+            <h4>Гурвалжны талбай</h4>
+            <p>10 даалгавар · Дундаж · ~30 мин</p>
+          </div>
+          <div class="ex-actions">
+            <button class="ex-btn" onclick="openExercise('solution')"><i class="fa-solid fa-lightbulb"></i> Бодолт, тайлбар</button>
+            <button class="ex-btn ex-btn-alt" onclick="navigateTo('lessons')"><i class="fa-solid fa-play"></i> Холбоотой хичээл</button>
+          </div>
+        </div>
+        <div class="exercise-row">
+          <div class="ex-info">
+            <span class="grade-badge">9-р анги</span>
+            <h4>Квадрат тэгшитгэл</h4>
+            <p>15 даалгавар · Хүндэвтэр · ~45 мин</p>
+          </div>
+          <div class="ex-actions">
+            <button class="ex-btn" onclick="openExercise('solution')"><i class="fa-solid fa-lightbulb"></i> Бодолт, тайлбар</button>
+            <button class="ex-btn ex-btn-alt" onclick="navigateTo('lessons')"><i class="fa-solid fa-play"></i> Холбоотой хичээл</button>
+          </div>
+        </div>
+        <div class="exercise-row">
+          <div class="ex-info">
+            <span class="grade-badge">10-р анги</span>
+            <h4>Уламжлал тооцох</h4>
+            <p>20 даалгавар · Хүнд · ~60 мин</p>
+          </div>
+          <div class="ex-actions">
+            <button class="ex-btn" onclick="openExercise('solution')"><i class="fa-solid fa-lightbulb"></i> Бодолт, тайлбар</button>
+            <button class="ex-btn ex-btn-alt" onclick="navigateTo('lessons')"><i class="fa-solid fa-play"></i> Холбоотой хичээл</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="subject-block">
+      <h2 class="subject-title"><i class="fa-solid fa-laptop-code"></i> МЭДЭЭЛЛИЙН ТЕХНОЛОГИ</h2>
+      <div class="exercise-list">
+        <div class="exercise-row">
+          <div class="ex-info">
+            <span class="grade-badge">8-р анги</span>
+            <h4>HTML дасгал</h4>
+            <p>8 даалгавар · Хялбар · ~25 мин</p>
+          </div>
+          <div class="ex-actions">
+            <button class="ex-btn" onclick="openExercise('solution')"><i class="fa-solid fa-lightbulb"></i> Бодолт, тайлбар</button>
+            <button class="ex-btn ex-btn-alt" onclick="navigateTo('lessons')"><i class="fa-solid fa-play"></i> Холбоотой хичээл</button>
+          </div>
+        </div>
+        <div class="exercise-row">
+          <div class="ex-info">
+            <span class="grade-badge">9-р анги</span>
+            <h4>Python давталт</h4>
+            <p>12 даалгавар · Дундаж · ~40 мин</p>
+          </div>
+          <div class="ex-actions">
+            <button class="ex-btn" onclick="openExercise('solution')"><i class="fa-solid fa-lightbulb"></i> Бодолт, тайлбар</button>
+            <button class="ex-btn ex-btn-alt" onclick="navigateTo('lessons')"><i class="fa-solid fa-play"></i> Холбоотой хичээл</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ҮНЭЛГЭЭ ===== -->
+  <section class="page page-assessment" data-page="assessment">
+    <div class="page-header">
+      <h1>Үнэлгээ</h1>
+      <p>Өөрийгөө сорих тест, шалгалт болон сертификат</p>
+    </div>
+
+    <div class="quarter-tabs">
+      <button class="qtab active" onclick="switchQuarter(this, 1)">I улирал</button>
+      <button class="qtab" onclick="switchQuarter(this, 2)">II улирал</button>
+      <button class="qtab" onclick="switchQuarter(this, 3)">III улирал</button>
+      <button class="qtab" onclick="switchQuarter(this, 4)">IV улирал</button>
+    </div>
+
+    <div class="assess-grid">
+      <div class="assess-card">
+        <div class="assess-top">
+          <span class="grade-badge">8-р анги</span>
+          <i class="fa-solid fa-square-root-variable assess-icon"></i>
+        </div>
+        <h4>Математикийн улирлын шалгалт</h4>
+        <p>25 асуулт · 60 минут</p>
+        <div class="assess-actions">
+          <button class="ex-btn" onclick="openAssessment('view')"><i class="fa-regular fa-eye"></i> Үнэлгээ харах</button>
+          <button class="ex-btn ex-btn-alt" onclick="openAssessment('cert')"><i class="fa-solid fa-award"></i> Сертификат авах</button>
+        </div>
+      </div>
+
+      <div class="assess-card">
+        <div class="assess-top">
+          <span class="grade-badge">9-р анги</span>
+          <i class="fa-solid fa-laptop-code assess-icon"></i>
+        </div>
+        <h4>МТ-ийн улирлын шалгалт</h4>
+        <p>30 асуулт · 75 минут</p>
+        <div class="assess-actions">
+          <button class="ex-btn" onclick="openAssessment('view')"><i class="fa-regular fa-eye"></i> Үнэлгээ харах</button>
+          <button class="ex-btn ex-btn-alt" onclick="openAssessment('cert')"><i class="fa-solid fa-award"></i> Сертификат авах</button>
+        </div>
+      </div>
+
+      <div class="assess-card">
+        <div class="assess-top">
+          <span class="grade-badge">10-р анги</span>
+          <i class="fa-solid fa-chart-line assess-icon"></i>
+        </div>
+        <h4>Математикийн ерөнхий тест</h4>
+        <p>40 асуулт · 90 минут</p>
+        <div class="assess-actions">
+          <button class="ex-btn" onclick="openAssessment('view')"><i class="fa-regular fa-eye"></i> Үнэлгээ харах</button>
+          <button class="ex-btn ex-btn-alt" onclick="openAssessment('cert')"><i class="fa-solid fa-award"></i> Сертификат авах</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== МИНИЙ СУРГАЛТ ===== -->
+  <section class="page page-mycourses" data-page="mycourses">
+    <div class="page-header">
+      <h1>Миний сургалт</h1>
+      <p>Таны үзсэн хичээл, ажилласан даалгавар, авсан сертификатууд</p>
+    </div>
+
+    <div class="my-stats">
+      <div class="mystat">
+        <i class="fa-solid fa-video"></i>
+        <strong>12</strong>
+        <span>Үзсэн хичээл</span>
+      </div>
+      <div class="mystat">
+        <i class="fa-solid fa-pen-to-square"></i>
+        <strong>34</strong>
+        <span>Хийсэн даалгавар</span>
+      </div>
+      <div class="mystat">
+        <i class="fa-solid fa-award"></i>
+        <strong>5</strong>
+        <span>Сертификат</span>
+      </div>
+      <div class="mystat">
+        <i class="fa-solid fa-clock"></i>
+        <strong>28ц</strong>
+        <span>Нийт цаг</span>
+      </div>
+    </div>
+
+    <div class="my-section">
+      <h3>Сүүлд үзсэн хичээлүүд</h3>
+      <div class="my-list">
+        <div class="my-row">
+          <i class="fa-solid fa-play-circle my-icon mi-blue"></i>
+          <div>
+            <h5>Адил талт гурвалжин</h5>
+            <p>Математик · 10-р анги · 80% дууссан</p>
+            <div class="progress"><span style="width:80%"></span></div>
+          </div>
+          <button class="ex-btn">Үргэлжлүүлэх</button>
+        </div>
+        <div class="my-row">
+          <i class="fa-solid fa-play-circle my-icon mi-pink"></i>
+          <div>
+            <h5>Python давталт</h5>
+            <p>МТ · 9-р анги · 45% дууссан</p>
+            <div class="progress"><span style="width:45%"></span></div>
+          </div>
+          <button class="ex-btn">Үргэлжлүүлэх</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="my-section">
+      <h3>Миний сертификатууд</h3>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <div class="cert-ribbon"><i class="fa-solid fa-award"></i></div>
+          <h4>Математик</h4>
+          <p>10-р анги · II улирал</p>
+          <span class="cert-score">95 / 100</span>
+          <button class="ex-btn ex-btn-alt"><i class="fa-solid fa-download"></i> Татах</button>
+        </div>
+        <div class="cert-card">
+          <div class="cert-ribbon cr-pink"><i class="fa-solid fa-award"></i></div>
+          <h4>Мэдээлэл зүй</h4>
+          <p>9-р анги · I улирал</p>
+          <span class="cert-score">88 / 100</span>
+          <button class="ex-btn ex-btn-alt"><i class="fa-solid fa-download"></i> Татах</button>
+        </div>
+        <div class="cert-card">
+          <div class="cert-ribbon cr-orange"><i class="fa-solid fa-award"></i></div>
+          <h4>Математик</h4>
+          <p>8-р анги · III улирал</p>
+          <span class="cert-score">92 / 100</span>
+          <button class="ex-btn ex-btn-alt"><i class="fa-solid fa-download"></i> Татах</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============== FOOTER ============== -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="foot-col">
+      <h4><i class="fa-solid fa-phone"></i> Холбоо барих</h4>
+      <p>+976 9999-0000</p>
+      <p>info@eduhub.mn</p>
+    </div>
+    <div class="foot-col foot-center">
+      <p class="copyright">© COPYRIGHT 2026 · EduHub</p>
+      <p class="tagline">Боловсролын ирээдүйг бид бүтээнэ</p>
+    </div>
+    <div class="foot-col foot-right">
+      <h4><i class="fa-solid fa-location-dot"></i> Байршил</h4>
+      <p>Улаанбаатар хот</p>
+      <p>Сүхбаатар дүүрэг</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============== НЭВТРЭХ MODAL ============== -->
+<div class="modal-overlay" id="loginModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('loginModal')">×</button>
+    <div class="modal-head">
+      <div class="logo-mark big"><i class="fa-solid fa-graduation-cap"></i></div>
+      <h2>Нэвтрэх</h2>
+      <p>EduHub-д тавтай морилно уу</p>
+    </div>
+    <form onsubmit="handleLogin(event)">
+      <label>И-мэйл</label>
+      <input type="email" required placeholder="name@example.com" id="loginEmail">
+      <label>Нууц үг</label>
+      <input type="password" required placeholder="••••••••" id="loginPass">
+      <button type="submit" class="btn-primary full">Нэвтрэх</button>
+    </form>
+    <p class="modal-foot">Бүртгэлгүй юу? <a href="#">Бүртгүүлэх</a></p>
+  </div>
+</div>
+
+<!-- ============== ХИЧЭЭЛ ҮЗЭХ MODAL ============== -->
+<div class="modal-overlay" id="lessonModal">
+  <div class="modal modal-large">
+    <button class="modal-close" onclick="closeModal('lessonModal')">×</button>
+    <div class="lesson-modal-head">
+      <span class="grade-badge" id="lmGrade">8-р анги</span>
+      <h2 id="lmTitle">Хичээлийн нэр</h2>
+    </div>
+    <div class="lesson-modes">
+      <button class="mode-btn active" onclick="switchMode(this, 'video')">
+        <i class="fa-solid fa-play"></i> Видеогоор үзэх
+      </button>
+      <button class="mode-btn" onclick="switchMode(this, 'slide')">
+        <i class="fa-solid fa-file-pdf"></i> Слайд / PDF
+      </button>
+    </div>
+    <div class="lesson-viewer" id="lessonViewer">
+      <div class="video-placeholder">
+        <i class="fa-solid fa-circle-play"></i>
+        <p>Видео тоглуулагч энд харагдана</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============== ҮЙЛДЭЛ ШААРДЛАГАТАЙ MODAL ============== -->
+<div class="modal-overlay" id="authRequiredModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('authRequiredModal')">×</button>
+    <div class="modal-head">
+      <div class="logo-mark big" style="background:linear-gradient(135deg,#ff9966,#ff5e62)"><i class="fa-solid fa-lock"></i></div>
+      <h2>Нэвтрэх шаардлагатай</h2>
+      <p>Энэ хэсэгт зөвхөн нэвтэрсэн сурагчид нэвтэрнэ</p>
+    </div>
+    <button class="btn-primary full" onclick="closeModal('authRequiredModal'); openModal('loginModal')">Нэвтрэх</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
 </body>
 </html>
