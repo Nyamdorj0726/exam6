@@ -151,7 +151,7 @@ function setLessonViewer(mode) {
       <div class="video-placeholder">
         <i class="fa-solid fa-file-pdf"></i>
         <p>Слайд / PDF -ээр хичээл үзэх</p>
-        <a href="/file/VIII.6.1 - 6.2.pdf" target="_blank"><p style="font-size:12px; opacity:0.7; margin-top:6px;">PDF татах</p></a>
+        <a href="/VIII.6.1 - 6.2.pdf" target="_blank"><p style="font-size:12px; opacity:0.7; margin-top:6px;">PDF татах</p></a>
         
       </div>`;
   }
