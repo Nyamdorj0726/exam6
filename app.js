@@ -143,16 +143,16 @@ function setLessonViewer(mode) {
   if (mode === 'video') {
     viewer.innerHTML = `
       <div class="video-placeholder">
-        <i class="fa-solid fa-circle-play"></i>
-        <p>Видео тоглуулагч энд харагдана</p>
-        <p style="font-size:12px; opacity:0.7; margin-top:6px;">YouTube эсвэл өөрийн серверээс embed хийнэ</p>
+        <a href="https://www.youtube.com/watch?v=xisrv27PWEY" target="_blank"><i class="fa-solid fa-circle-play"></i></a>
+        <p style="font-size:12px; opacity:0.7; margin-top:6px;">Үзэхийн тулд тоглуулагч дээр дарна уу</p>
       </div>`;
   } else {
     viewer.innerHTML = `
       <div class="video-placeholder">
         <i class="fa-solid fa-file-pdf"></i>
-        <p>Слайд / PDF үзэгч энд харагдана</p>
-        <p style="font-size:12px; opacity:0.7; margin-top:6px;">PDF.js эсвэл iframe ашиглан</p>
+        <p>Слайд / PDF -ээр хичээл үзэх</p>
+        <a href="/file/VIII.6.1 - 6.2.pdf" target="_blank"><p style="font-size:12px; opacity:0.7; margin-top:6px;">PDF татах</p></a>
+        
       </div>`;
   }
 }
